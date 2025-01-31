@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Leaflet_quick start guide, Css Link Bağlantı Noktası: -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <!-- * Bs Icons Bağlantı Noktası: -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- Css Bağlantı Noktası: -->
+  <link rel="stylesheet" href="./style.css" />
+  <title>Note Map</title>
+</head>
+<!----------------------------ARA-------------------------------> 
+<body>
+  <!-- !Aside Kısmı: --> 
+    <!-- <aside class"add"> Class eklediğimizdeki hali -->
+  <aside >
+    <div class="head">
+      <h1>Notlar</h1>
+      <h1 id="add-title">Yeni Not</h1>
+      <i id="arrow" class="bi bi-chevron-up"></i>
+    </div>
+    <!-- Form -->
+    <form>
+      <!-- Title -->
+      <div class="field">
+        <label>Başlık</label>
+        <input type="text" required />
+      </div>
+      <!-- Date -->
+      <div class="field">
+        <label>Tarih</label>
+        <input type="date" required />
+      </div>
+      <!-- Status -->
+      <div class="field">
+        <label>Durum</label>
+        <select>
+          <option disabled selected value="">Seçiniz</option>
+          <option value="goto">Ziyaret</option>
+          <option value="park">Park Yeri</option>
+          <option value="home">Ev</option>
+          <option value="job">İş Yeri</option>
+          <option value="school">Okul</option>
+          <option value="hospital">Hastane</option>
+          <option value="airport">Havalimanı</option>
+          <option value="forest">Mesire Alanı</option>
+          <option value="restaurante">Restaurante</option>
+        </select>
+      </div>
+      <!-- Buttons -->
+      <div class="buttons">
+        <button id="cancel">İptal</button>
+        <button>Ekle</button>
+      </div>
+    </form>
+    <!-- List -->
+    <ul>
+      <!-- Todo:list.1 -->
+      <!-- <li>
+        <!-- !İnfo -->
+        <!-- <div>
+          <p>İstanbul Gezisi</p>
+          <p>15 Şubat 2025</p>
+          <p>Park</p>
+        </div> -->
+        <!-- !İcons -->
+        <!-- <div class="icons">
+          <i class="bi bi-airplane-fill" id="fly-btn"></i>
+          <i class="bi bi-trash" id="delete-btn"></i>
+        </div> 
+       </li> -->
+      <!-- Todo:list.2 -->
+      <!-- <li>
+        <!-- !İnfo -->
+        <!-- <div>
+          <p>İstanbul Gezisi</p>
+          <p>15 Şubat 2025</p>
+          <p>Park</p>
+        </div> -->
+        <!-- !İcons -->
+        <!-- <div class="icons">
+          <i class="bi bi-airplane-fill" id="fly-btn"></i>
+          <i class="bi bi-trash" id="delete-btn"></i>
+        </div>
+      </li> --> 
+    </ul>
+  </aside>
+<!----------------------------ARA-------------------------------> 
+  <!-- !Map Kısmı: -->
+  <div id="map"></div>
+<!----------------------------ARA-------------------------------> 
+  <!-- Leaflet_quick start guide, Js Link Bağlantı Noktası: -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <!-- Js Bağlantı Noktası: -->
+  <script src="./js/main.js" type="module"></script>
+</body>
+
+</html>
